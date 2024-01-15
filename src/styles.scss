@@ -2,3 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import 'theme/variables';
+@import 'theme/base';
+@import 'theme/buttons';
+@import 'theme/typography';
