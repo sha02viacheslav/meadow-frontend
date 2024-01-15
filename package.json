@@ -2,6 +2,7 @@
   "name": "meadow-frontend",
   "version": "0.0.0",
   "scripts": {
+    "prepare": "husky install",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -11,6 +12,17 @@
     "format": "prettier --write \"src/**/*.*\""
   },
   "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.*": [
+      "npm run lint",
+      "npm run format"
+    ]
+  },
   "dependencies": {
     "@angular/animations": "^17.0.0",
     "@angular/common": "^17.0.0",
@@ -40,12 +52,14 @@
     "@typescript-eslint/parser": "6.18.0",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.56.0",
+    "husky": "^8.0.3",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "lint-staged": "^15.2.0",
     "postcss": "^8.4.33",
     "prettier": "^3.2.2",
     "tailwindcss": "^3.4.1",
