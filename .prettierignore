@@ -1,6 +1,7 @@
 # add files you wish to ignore here
 **/*.md
 **/*.svg
+**/*.ico
 
 src/assets/*
 node_modules/

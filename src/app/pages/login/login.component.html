@@ -1,53 +1,25 @@
 <div>
-  <h2 class="title text-black font-bold leading-10 max-w-[257px] mb-4">
-    Welcome back to Meadow
-  </h2>
+  <h2 class="title text-black font-bold leading-10 max-w-[257px] mb-4">Welcome back to Meadow</h2>
   <p class="text-grey font-medium mb-10">Sign in to your account to continue</p>
 
   <div [formGroup]="loginFormGroup">
     <div class="custom-form-field mb-6">
-      <input
-        type="text"
-        placeholder="Username"
-        pInputText
-        formControlName="username"
-        (keydown.enter)="login()" />
-      <small
-        class="p-error"
-        *ngIf="loginFormGroup.controls['username'].errors?.['required']"
-        >Required</small
-      >
+      <input type="text" placeholder="Username" pInputText formControlName="username" (keydown.enter)="login()" />
+      <small class="p-error" *ngIf="loginFormGroup.controls['username'].errors?.['required']">Required</small>
     </div>
     <div class="custom-form-field mb-6">
-      <input
-        type="password"
-        placeholder="Password"
-        pInputText
-        formControlName="password"
-        (keydown.enter)="login()" />
-      <small
-        class="p-error"
-        *ngIf="loginFormGroup.controls['password'].errors?.['required']"
-        >Required</small
-      >
+      <input type="password" placeholder="Password" pInputText formControlName="password" (keydown.enter)="login()" />
+      <small class="p-error" *ngIf="loginFormGroup.controls['password'].errors?.['required']">Required</small>
     </div>
 
     <div class="flex justify-between">
       <div class="float-left">
         <div class="p-field-checkbox">
-          <p-checkbox
-            id="rememberMe"
-            [binary]="true"
-            label="Remember me"
-            formControlName="rememberMe"></p-checkbox>
+          <p-checkbox id="rememberMe" [binary]="true" label="Remember me" formControlName="rememberMe"></p-checkbox>
         </div>
       </div>
       <div class="float-right">
-        <span
-          ><a class="blue-cta" routerLink="/forgot-password"
-            >Forgot password?</a
-          ></span
-        >
+        <span><a class="blue-cta" routerLink="/forgot-password">Forgot password?</a></span>
       </div>
     </div>
   </div>

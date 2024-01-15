@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  FormBuilder,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { CheckboxModule } from 'primeng/checkbox';
 import { RouterLink } from '@angular/router';
@@ -13,13 +8,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    InputTextModule,
-    CheckboxModule,
-    RouterLink,
-  ],
+  imports: [CommonModule, ReactiveFormsModule, InputTextModule, CheckboxModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
