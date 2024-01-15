@@ -18,8 +18,10 @@
     }
   },
   "lint-staged": {
-    "src/**/*.*": [
-      "npm run lint",
+    "src/**/*.{ts,html}": [
+      "npm run lint"
+    ],
+    "src/**/*.{json,css,scss,less,md,ts,html}": [
       "npm run format"
     ]
   },

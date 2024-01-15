@@ -18,20 +18,3 @@ button:focus {
   box-shadow: none !important;
   outline: none;
 }
-
-.blue-cta {
-  color: var(--Blue) !important;
-  font-size: 14px;
-  font-weight: 500;
-  white-space: nowrap;
-
-  &:hover {
-    color: var(--Blue) !important;
-    cursor: pointer;
-    text-decoration: underline !important;
-  }
-
-  @media (max-width: 767px) {
-    text-decoration: underline !important;
-  }
-}
