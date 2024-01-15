@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@import 'primeng/resources/themes/nova/theme.css';
+@import 'primeng/resources/primeng.css';
+
 @tailwind components;
 @tailwind utilities;
 
@@ -7,3 +11,4 @@
 @import 'theme/base';
 @import 'theme/buttons';
 @import 'theme/typography';
+@import 'theme/primeng/primeng';

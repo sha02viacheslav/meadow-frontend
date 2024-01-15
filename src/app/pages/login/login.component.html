@@ -3,5 +3,54 @@
     Welcome back to Meadow
   </h2>
   <p class="text-grey font-medium mb-10">Sign in to your account to continue</p>
-  <button class="btn-raised w-full">Sign In</button>
+
+  <div [formGroup]="loginFormGroup">
+    <div class="custom-form-field mb-6">
+      <input
+        type="text"
+        placeholder="Username"
+        pInputText
+        formControlName="username"
+        (keydown.enter)="login()" />
+      <small
+        class="p-error"
+        *ngIf="loginFormGroup.controls['username'].errors?.['required']"
+        >Required</small
+      >
+    </div>
+    <div class="custom-form-field mb-6">
+      <input
+        type="password"
+        placeholder="Password"
+        pInputText
+        formControlName="password"
+        (keydown.enter)="login()" />
+      <small
+        class="p-error"
+        *ngIf="loginFormGroup.controls['password'].errors?.['required']"
+        >Required</small
+      >
+    </div>
+
+    <div class="flex justify-between">
+      <div class="float-left">
+        <div class="p-field-checkbox">
+          <p-checkbox
+            id="rememberMe"
+            [binary]="true"
+            label="Remember me"
+            formControlName="rememberMe"></p-checkbox>
+        </div>
+      </div>
+      <div class="float-right">
+        <span
+          ><a class="blue-cta" routerLink="/forgot-password"
+            >Forgot password?</a
+          ></span
+        >
+      </div>
+    </div>
+  </div>
+
+  <button class="btn-raised w-full mt-12" (click)="login()">Sign In</button>
 </div>

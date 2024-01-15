@@ -6,6 +6,7 @@
   font-weight: 700;
   line-height: 20px;
   color: var(--white-text);
+  border: none;
   background: var(--Green);
   text-align: center;
   white-space: nowrap;
@@ -15,6 +16,7 @@
     box-shadow: 0 0 7px 1px rgba(67, 146, 108, 0.5);
     color: var(--white-text);
     text-decoration: none;
+    cursor: pointer;
   }
 
   &:disabled {
