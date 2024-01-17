@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.returnUrl = params['returnUrl'] || '/';
+      console.log(this.returnUrl);
     });
   }
 
