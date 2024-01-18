@@ -1,15 +1,15 @@
 <div>
-  <h2 class="title text-black font-bold leading-10 max-w-[257px] mb-4">Welcome back to Meadow</h2>
-  <p class="text-grey font-medium mb-10">Sign in to your account to continue</p>
+  <h2 class="title text-black font-bold leading-10 max-w-[257px] mt-0 mb-4">Welcome back to Meadow</h2>
+  <div class="text-grey font-medium mb-10">Sign in to your account to continue</div>
 
-  <div [formGroup]="loginFormGroup">
+  <div [formGroup]="formGroup">
     <div class="custom-form-field mb-6">
       <input type="text" placeholder="Username" pInputText formControlName="username" (keydown.enter)="login()" />
-      <small class="p-error" *ngIf="loginFormGroup.controls['username'].errors?.['required']">Required</small>
+      <small class="p-error" *ngIf="formGroup.controls['username'].errors?.['required']">Required</small>
     </div>
     <div class="custom-form-field mb-6">
       <input type="password" placeholder="Password" pInputText formControlName="password" (keydown.enter)="login()" />
-      <small class="p-error" *ngIf="loginFormGroup.controls['password'].errors?.['required']">Required</small>
+      <small class="p-error" *ngIf="formGroup.controls['password'].errors?.['required']">Required</small>
     </div>
 
     <div class="flex justify-between">
@@ -19,10 +19,10 @@
         </div>
       </div>
       <div class="float-right">
-        <span><a class="blue-cta" routerLink="/forgot-password">Forgot password?</a></span>
+        <span><a class="blue-cta" [routerLink]="APP_ROUTES.FORGOT_PASSWORD">Forgot password?</a></span>
       </div>
     </div>
   </div>
 
-  <button class="btn-raised w-full mt-12" (click)="login()">Sign In</button>
+  <button class="btn-raised w-full mt-12" (click)="login()" [disabled]="submitted">Sign In</button>
 </div>

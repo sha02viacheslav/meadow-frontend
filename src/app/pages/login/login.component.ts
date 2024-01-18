@@ -8,6 +8,7 @@ import { AuthApiService } from '@services/api/auth-api/auth-api.service';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '@services/auth/auth.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { APP_ROUTES } from '../../@core/constants/routes/app-routes.constant';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent implements OnInit {
-  loginFormGroup: FormGroup;
+  protected readonly APP_ROUTES = APP_ROUTES;
+  formGroup: FormGroup;
   submitted: boolean = false;
   returnUrl: string = '/';
 
@@ -29,7 +31,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) {
-    this.loginFormGroup = this.formBuilder.group({
+    this.formGroup = this.formBuilder.group({
       username: ['', [Validators.required]],
       password: ['', [Validators.required]],
       rememberMe: [false, [Validators.required]],
@@ -48,13 +50,13 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    if (this.loginFormGroup.invalid) {
-      this.loginFormGroup.markAllAsTouched();
+    if (this.formGroup.invalid) {
+      this.formGroup.markAllAsTouched();
       return;
     }
 
-    this.submitted = false;
-    this.authApiService.userLogin(this.loginFormGroup.value).subscribe(
+    this.submitted = true;
+    this.authApiService.userLogin(this.formGroup.value).subscribe(
       res => {
         if (!res.success) {
           this.toastr.error(res.message?.[0]);
