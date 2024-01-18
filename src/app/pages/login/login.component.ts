@@ -8,7 +8,7 @@ import { AuthApiService } from '@services/api/auth-api/auth-api.service';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '@services/auth/auth.service';
 import { HttpErrorResponse } from '@angular/common/http';
-import { APP_ROUTES } from '../../@core/constants/routes/app-routes.constant';
+import { APP_ROUTES } from '@constants';
 import { PasswordModule } from 'primeng/password';
 
 @Component({

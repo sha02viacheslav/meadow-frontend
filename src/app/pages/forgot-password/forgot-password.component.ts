@@ -6,7 +6,7 @@ import { PaginatorModule } from 'primeng/paginator';
 import { AuthApiService } from '@services/api/auth-api/auth-api.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
-import { APP_ROUTES } from '../../@core/constants/routes/app-routes.constant';
+import { APP_ROUTES } from '@constants';
 import { BackLinkComponent } from '../../components/back-link/back-link.component';
 
 @Component({

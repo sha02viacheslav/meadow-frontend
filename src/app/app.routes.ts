@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { authGuard } from '@guards/auth.guard';
-import { APP_ROUTE_SEGMENTS } from './@core/constants/routes/app-routes.constant';
+import { APP_ROUTE_SEGMENTS } from '@constants';
 import { AuthLayoutComponent } from './components/auth-layout/auth-layout.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { LoginComponent } from './pages/login/login.component';

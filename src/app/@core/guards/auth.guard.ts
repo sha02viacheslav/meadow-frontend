@@ -2,7 +2,7 @@ import { inject } from '@angular/core';
 import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from '@services/auth/auth.service';
-import { APP_ROUTES } from '../constants/routes/app-routes.constant';
+import { APP_ROUTES } from '@constants';
 
 export const authGuard = (
   route: ActivatedRouteSnapshot,

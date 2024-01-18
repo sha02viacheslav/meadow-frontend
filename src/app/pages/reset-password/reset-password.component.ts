@@ -7,9 +7,9 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { AuthService } from '@services/auth/auth.service';
 import { ToastrService } from 'ngx-toastr';
 import { AuthApiService } from '@services/api/auth-api/auth-api.service';
-import { APP_ROUTES } from '../../@core/constants/routes/app-routes.constant';
 import { BackLinkComponent } from '../../components/back-link/back-link.component';
 import { PasswordModule } from 'primeng/password';
+import { APP_ROUTES, PASSWORD_REGEX } from '@constants';
 
 @Component({
   selector: 'app-reset-password',
@@ -34,7 +34,7 @@ export class ResetPasswordComponent implements OnInit {
     private toastr: ToastrService
   ) {
     this.formGroup = this.formBuilder.group({
-      password: ['', [Validators.required]],
+      password: ['', [Validators.required, Validators.pattern(PASSWORD_REGEX)]],
     });
   }
 
