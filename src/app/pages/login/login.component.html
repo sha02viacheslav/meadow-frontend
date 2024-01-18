@@ -4,11 +4,16 @@
 
   <div [formGroup]="formGroup">
     <div class="custom-form-field mb-6">
-      <input type="text" placeholder="Username" pInputText formControlName="username" (keydown.enter)="login()" />
+      <input type="text" placeholder="Username" pInputText formControlName="username" (keydown.enter)="submit()" />
       <small class="p-error" *ngIf="formGroup.controls['username'].errors?.['required']">Required</small>
     </div>
     <div class="custom-form-field mb-6">
-      <input type="password" placeholder="Password" pInputText formControlName="password" (keydown.enter)="login()" />
+      <p-password
+        placeholder="Password"
+        [toggleMask]="true"
+        [feedback]="false"
+        formControlName="password"
+        (keydown.enter)="submit()" />
       <small class="p-error" *ngIf="formGroup.controls['password'].errors?.['required']">Required</small>
     </div>
 
@@ -24,5 +29,5 @@
     </div>
   </div>
 
-  <button class="btn-raised w-full mt-12" (click)="login()" [disabled]="submitted">Sign In</button>
+  <button class="btn-raised w-full mt-12" (click)="submit()" [disabled]="submitted">Sign In</button>
 </div>

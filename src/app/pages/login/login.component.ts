@@ -9,11 +9,12 @@ import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '@services/auth/auth.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { APP_ROUTES } from '../../@core/constants/routes/app-routes.constant';
+import { PasswordModule } from 'primeng/password';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, InputTextModule, CheckboxModule, RouterLink],
+  imports: [CommonModule, ReactiveFormsModule, InputTextModule, CheckboxModule, RouterLink, PasswordModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
@@ -49,7 +50,7 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl(this.returnUrl);
   }
 
-  login() {
+  submit() {
     if (this.formGroup.invalid) {
       this.formGroup.markAllAsTouched();
       return;

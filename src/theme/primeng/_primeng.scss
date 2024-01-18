@@ -17,6 +17,10 @@
     background: var(--white-text);
   }
 
+  .p-password {
+    width: 100%;
+  }
+
   // Validation
   .p-error {
     display: none;
@@ -39,7 +43,8 @@
   p-dropdown.ng-invalid.ng-touched .p-dropdown,
   p-multiselect.ng-invalid.ng-touched .p-multiselect,
   p-autocomplete.ng-invalid.ng-touched .p-autocomplete-input,
-  p-inputnumber.ng-invalid.ng-touched .p-inputnumber-input {
+  p-inputnumber.ng-invalid.ng-touched .p-inputnumber-input,
+  p-password.ng-invalid.ng-touched .p-password .p-inputtext {
     border-color: var(--pink-10);
   }
 }

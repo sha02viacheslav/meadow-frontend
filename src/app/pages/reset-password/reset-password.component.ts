@@ -9,11 +9,12 @@ import { ToastrService } from 'ngx-toastr';
 import { AuthApiService } from '@services/api/auth-api/auth-api.service';
 import { APP_ROUTES } from '../../@core/constants/routes/app-routes.constant';
 import { BackLinkComponent } from '../../components/back-link/back-link.component';
+import { PasswordModule } from 'primeng/password';
 
 @Component({
   selector: 'app-reset-password',
   standalone: true,
-  imports: [FormsModule, InputTextModule, NgIf, ReactiveFormsModule, RouterLink, BackLinkComponent],
+  imports: [FormsModule, InputTextModule, NgIf, ReactiveFormsModule, RouterLink, BackLinkComponent, PasswordModule],
   templateUrl: './reset-password.component.html',
   styleUrl: './reset-password.component.scss',
 })
