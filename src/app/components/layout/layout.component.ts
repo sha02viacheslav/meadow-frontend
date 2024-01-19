@@ -1,12 +1,14 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from '@components/sidebar/sidebar.component';
+import { TopbarComponent } from '@components/topbar/topbar.component';
 import { LayoutService } from '@services/layout/layout.service';
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [NgClass, SidebarComponent],
+  imports: [NgClass, RouterOutlet, SidebarComponent, TopbarComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
 })
