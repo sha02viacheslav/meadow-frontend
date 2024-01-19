@@ -24,6 +24,7 @@
     "paths": {
       "@env/*": ["src/environments/*"],
       "@constants": ["src/app/@core/constants/index"],
+      "@components/*": ["src/app/components/*"],
       "@dto": ["src/app/@core/dto/index"],
       "@guards/*": ["src/app/@core/guards/*"],
       "@models": ["src/app/@core/models/index"],

@@ -8,11 +8,12 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 import { APP_ROUTES } from '@constants';
 import { BackLinkComponent } from '../../components/back-link/back-link.component';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-forgot-password',
   standalone: true,
-  imports: [InputTextModule, NgIf, PaginatorModule, ReactiveFormsModule, BackLinkComponent],
+  imports: [InputTextModule, NgIf, PaginatorModule, ReactiveFormsModule, BackLinkComponent, ButtonModule],
   templateUrl: './forgot-password.component.html',
   styleUrl: './forgot-password.component.scss',
 })

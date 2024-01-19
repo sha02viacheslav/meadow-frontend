@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+.p-component {
+  font-family: var(--font-family);
+  font-feature-settings: var(--font-feature-settings, normal);
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+}
+
+.p-component-overlay {
+  background-color: $maskBg;
+  transition-duration: $transitionDuration;
+}
+
+.p-disabled,
+.p-component:disabled {
+  opacity: $disabledOpacity;
+}
+
+.p-error {
+  color: $errorColor;
+}
+
+.p-text-secondary {
+  color: $textSecondaryColor;
+}
+
+.pi {
+  font-size: $primeIconFontSize;
+}
+
+.p-icon {
+  width: $primeIconFontSize;
+  height: $primeIconFontSize;
+}
+
+.p-link {
+  font-family: var(--font-family);
+  font-feature-settings: var(--font-feature-settings, normal);
+  font-size: $fontSize;
+  border-radius: $borderRadius;
+
+  &:focus-visible {
+    @include focused();
+  }
+}
+
+.p-component-overlay-enter {
+  animation: p-component-overlay-enter-animation 150ms forwards;
+}
+
+.p-component-overlay-leave {
+  animation: p-component-overlay-leave-animation 150ms forwards;
+}
+
+.p-component-overlay {
+  @keyframes p-component-overlay-enter-animation {
+    from {
+      background-color: transparent;
+    }
+    to {
+      background-color: var(--maskbg);
+    }
+  }
+
+  @keyframes p-component-overlay-leave-animation {
+    from {
+      background-color: var(--maskbg);
+    }
+    to {
+      background-color: transparent;
+    }
+  }
+}
+
+.custom-form-field {
+  .p-inputtext {
+    padding: 0.6875rem 0.9375rem;
+    border-radius: 16px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    border-color: var(--grey-stroke);
+    background: var(--white-text);
+  }
+
+  .p-password {
+    width: 100%;
+  }
+
+  // Validation
+  .p-error {
+    display: none;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .ng-invalid.ng-touched,
+  .ng-invalid.ng-dirty {
+    & + .p-error,
+    & ~ .p-error {
+      display: block !important;
+      margin: 4px 0 0 8px;
+    }
+  }
+
+  .p-inputtext.ng-invalid.ng-touched,
+  input.ng-invalid.ng-touched,
+  input.ng-invalid.ng-touched + .input-group-append,
+  p-calendar.ng-invalid.ng-touched .p-calendar,
+  p-dropdown.ng-invalid.ng-touched .p-dropdown,
+  p-multiselect.ng-invalid.ng-touched .p-multiselect,
+  p-autocomplete.ng-invalid.ng-touched .p-autocomplete-input,
+  p-inputnumber.ng-invalid.ng-touched .p-inputnumber-input,
+  p-password.ng-invalid.ng-touched .p-password .p-inputtext {
+    border-color: var(--error-color);
+  }
+}

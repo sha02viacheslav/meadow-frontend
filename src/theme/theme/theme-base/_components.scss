@@ -1,0 +1,14 @@
+@import '_mixins';
+@import '_colors';
+
+@layer primeng {
+  @import '_common';
+
+  //Input
+  @import './components/input/_checkbox';
+  @import './components/input/_inputtext';
+  @import './components/input/_password';
+
+  //Button
+  @import './components/button/_button';
+}

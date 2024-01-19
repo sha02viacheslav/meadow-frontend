@@ -1,0 +1,11 @@
+<div class="layout-sidebar" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+  <div class="sidebar-header">
+    <a [routerLink]="['/']" class="app-logo">
+      <img src="assets/images/full-logo-white.png" height="24" width="150" alt="Full Logo" class="app-logo-normal" />
+    </a>
+  </div>
+
+  <div #menuContainer class="layout-menu-container">
+    <app-menu></app-menu>
+  </div>
+</div>

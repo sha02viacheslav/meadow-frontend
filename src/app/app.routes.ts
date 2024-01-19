@@ -22,6 +22,12 @@ export const routes: Routes = [
     path: '',
     component: LayoutComponent,
     canActivate: [authGuard],
-    children: [{ path: '', component: DashboardComponent }],
+    children: [
+      { path: APP_ROUTE_SEGMENTS.DASHBOARD, component: DashboardComponent },
+      { path: APP_ROUTE_SEGMENTS.PROFILE, component: DashboardComponent },
+      { path: APP_ROUTE_SEGMENTS.BILLING, component: DashboardComponent },
+      { path: APP_ROUTE_SEGMENTS.FAQ, component: DashboardComponent },
+      { path: APP_ROUTE_SEGMENTS.CONTACT_US, component: DashboardComponent },
+    ],
   },
 ];

@@ -10,11 +10,20 @@ import { AuthService } from '@services/auth/auth.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { APP_ROUTES } from '@constants';
 import { PasswordModule } from 'primeng/password';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, InputTextModule, CheckboxModule, RouterLink, PasswordModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    InputTextModule,
+    CheckboxModule,
+    RouterLink,
+    PasswordModule,
+    ButtonModule,
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })

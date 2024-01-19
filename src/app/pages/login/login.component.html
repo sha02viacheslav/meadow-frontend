@@ -24,10 +24,10 @@
         </div>
       </div>
       <div class="float-right">
-        <span><a class="blue-cta" [routerLink]="APP_ROUTES.FORGOT_PASSWORD">Forgot password?</a></span>
+        <p-button label="Forgot password?" [link]="true" [routerLink]="APP_ROUTES.FORGOT_PASSWORD"></p-button>
       </div>
     </div>
   </div>
 
-  <button class="btn-raised w-full mt-12" (click)="submit()" [disabled]="submitted">Sign In</button>
+  <p-button styleClass="w-full mt-12" label="Sign In" (click)="submit()" [disabled]="submitted" />
 </div>

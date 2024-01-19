@@ -10,11 +10,21 @@ import { AuthApiService } from '@services/api/auth-api/auth-api.service';
 import { BackLinkComponent } from '../../components/back-link/back-link.component';
 import { PasswordModule } from 'primeng/password';
 import { APP_ROUTES, PASSWORD_REGEX } from '@constants';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-reset-password',
   standalone: true,
-  imports: [FormsModule, InputTextModule, NgIf, ReactiveFormsModule, RouterLink, BackLinkComponent, PasswordModule],
+  imports: [
+    FormsModule,
+    InputTextModule,
+    NgIf,
+    ReactiveFormsModule,
+    RouterLink,
+    BackLinkComponent,
+    PasswordModule,
+    ButtonModule,
+  ],
   templateUrl: './reset-password.component.html',
   styleUrl: './reset-password.component.scss',
 })
