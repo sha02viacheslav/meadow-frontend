@@ -1,12 +1,23 @@
+// Theme colors
+$primaryColor: #349946 !default;
+$primaryLightColor: #a7f3d0 !default;
+$primaryDarkColor: #2f8a3f !default;
+$primaryDarkerColor: #2a7a38 !default;
+$primaryTextColor: #ffffff !default;
+
+$highlightBg: #ecfdf5 !default;
+$highlightTextColor: $primaryDarkerColor !default;
+$highlightFocusBg: rgba($primaryColor, 0.24) !default;
+
 //reused color variables
 $shade000: #ffffff !default; //surface
-$shade100: #f9fafb !default; //header background
+$shade100: #f8f8f8 !default; //header background
 $shade200: #f3f4f6 !default; //hover background
-$shade300: #e5e7eb !default; //border, divider
+$shade300: #e8e8e8 !default; //border, divider
 $shade400: #d1d5db !default; //input border
 $shade500: #9ca3af !default; //input icon
-$shade600: #6b7280 !default; //text secondary color
-$shade700: #4b5563 !default; //text color
+$shade600: #8f979f !default; //text secondary color
+$shade700: #081020 !default; //text color
 $shade800: #374151 !default; //unused
 $shade900: #081020 !default; //unused
 
@@ -257,6 +268,65 @@ $overlayContentBorder: 0 none !default;
 $overlayContentBg: $panelContentBg !default;
 $overlayContainerShadow: 0 1px 3px rgba(0, 0, 0, 0.3) !default;
 
+//tabview
+$tabviewMenuMargin: -1rem !default;
+
+$tabviewNavBorder: 1px solid $shade300 !default;
+$tabviewNavBorderWidth: 1px 1px 1px 1px !default;
+$tabviewNavBg: $shade100 !default;
+$tabviewNavPadding: 1rem !default;
+
+$tabviewHeaderSpacing: 0 !default;
+$tabviewHeaderBorder: solid $shade300 !default;
+$tabviewHeaderBorderWidth: 1px !default;
+$tabviewHeaderBorderRadius: 0.75rem !default;
+$tabviewHeaderBorderColor: $shade300 !default;
+$tabviewHeaderBg: $shade100 !default;
+$tabviewHeaderTextColor: $shade600 !default;
+$tabviewHeaderFontWeight: 600 !default;
+$tabviewHeaderPaddingX: 4rem !default;
+$tabviewHeaderPaddingY: 1rem !default;
+$tabviewHeaderHeight: 2.75rem !default;
+$tabviewHeaderMarginX: 0 !default;
+$tabviewHeaderMarginY: 0.375rem !default;
+
+$tabviewHeaderHoverBg: $shade000 !default;
+$tabviewHeaderHoverBorderColor: $shade100 !default;
+$tabviewHeaderTextHoverColor: $shade700 !default;
+$tabviewHeaderHoverHeight: 3.5rem !default;
+$tabviewHeaderHoverBorderRadius: 1rem !default;
+$tabviewHeaderHoverPaddingX: 4.375rem !default;
+$tabviewHeaderHoverMarginX: -0.375rem !default;
+$tabviewHeaderHoverMarginY: 0 !default;
+$tabviewHeaderHoverBoxShadow: 0px 6px 16px 0px rgba(86, 86, 86, 0.07) !default;
+$tabviewHeaderHoverZIndex: 2 !default;
+
+$tabviewHeaderActiveBg: $shade000 !default;
+$tabviewHeaderActiveBorderColor: $shade100 !default;
+$tabviewHeaderTextActiveColor: $shade700 !default;
+$tabviewHeaderActiveHeight: 3.5rem !default;
+$tabviewHeaderActiveRadius: 1rem !default;
+$tabviewHeaderActivePaddingX: 4.375rem !default;
+$tabviewHeaderActiveMarginX: -0.375rem !default;
+$tabviewHeaderActiveMarginY: 0 !default;
+$tabviewHeaderActiveBoxShadow: 0px 6px 16px 0px rgba(86, 86, 86, 0.07) !default;
+$tabviewHeaderActiveZIndex: 1 !default;
+
+$tabviewContentBorder: 0 none !default;
+$tabviewContentBg: $panelContentBg !default;
+$tabviewContentTextColor: $panelContentTextColor !default;
+$tabviewContentPadding: $panelContentPadding !default;
+
+//badge and tag
+$badgeBg: $primaryColor !default;
+$badgeTextColor: $primaryTextColor !default;
+$badgeMinWidth: 1.5rem !default;
+$badgeHeight: 1.5rem !default;
+$badgeFontWeight: 700 !default;
+$badgeFontSize: 0.75rem !default;
+
+$tagPadding: 0.25rem 0.4rem !default;
+
 :root {
   font-family: $fontFamily;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
@@ -317,7 +387,6 @@ $overlayContainerShadow: 0 1px 3px rgba(0, 0, 0, 0.3) !default;
   --grey-shapes: #f8f8f8;
   --white-background: #fcfbfa;
   --white-text: #fff;
-  --Green: #349946;
   --Green: #349946;
   --Green--75: #cce5d1;
 }

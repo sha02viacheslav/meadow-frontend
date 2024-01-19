@@ -25,6 +25,12 @@ export class MenuComponent implements OnInit {
           {
             label: 'Profile',
             routerLink: APP_ROUTES.PROFILE,
+            routerLinkActiveOptions: {
+              paths: 'subset',
+              queryParams: 'ignored',
+              matrixParams: 'ignored',
+              fragment: 'ignored',
+            },
           },
           {
             label: 'Billing',
