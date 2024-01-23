@@ -76,17 +76,7 @@
 }
 
 .custom-form-field {
-  .p-inputtext {
-    padding: 0.6875rem 0.9375rem;
-    border-radius: 16px;
-    width: 100%;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    border-color: var(--grey-stroke);
-    background: var(--white-text);
-  }
-
+  .p-inputtext,
   .p-password {
     width: 100%;
   }
@@ -102,7 +92,7 @@
     & + .p-error,
     & ~ .p-error {
       display: block !important;
-      margin: 4px 0 0 8px;
+      margin: 4px 0 0 nth($inputPadding, 2);
     }
   }
 

@@ -14,7 +14,7 @@ $shade000: #ffffff !default; //surface
 $shade100: #f8f8f8 !default; //header background
 $shade200: #f3f4f6 !default; //hover background
 $shade300: #e8e8e8 !default; //border, divider
-$shade400: #d1d5db !default; //input border
+$shade400: #e8e8e8 !default; //input border
 $shade500: #9ca3af !default; //input icon
 $shade600: #8f979f !default; //text secondary color
 $shade700: #081020 !default; //text color
@@ -70,10 +70,14 @@ $actionIconHoverColor: $shade800 !default;
 $actionIconBorderRadius: 50% !default;
 
 //input field (e.g. inputtext, spinner, inputmask)
-$inputPadding: 0.75rem 0.75rem !default;
-$inputTextFontSize: 1rem !default;
+$inputPadding: 0.6875rem 0.9375rem !default;
+$inputTextFontSize: 0.875rem !default;
+$inputTextFontWeight: 500 !default;
+$inputTextLineHeight: 1.25rem !default;
+$inputBorderRadius: 1rem !default;
 
 $inputBg: $shade000 !default;
+$inputDisabledBg: $shade100 !default;
 $inputTextColor: $shade700 !default;
 $inputIconColor: $shade600 !default;
 $inputBorder: 1px solid $shade400 !default;
