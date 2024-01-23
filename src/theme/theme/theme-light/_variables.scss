@@ -331,6 +331,21 @@ $badgeFontSize: 0.75rem !default;
 
 $tagPadding: 0.25rem 0.4rem !default;
 
+//input switch
+$inputSwitchWidth: 3rem !default;
+$inputSwitchHeight: 1.75rem !default;
+$inputSwitchBorderRadius: 30px !default;
+$inputSwitchHandleWidth: 1.25rem !default;
+$inputSwitchHandleHeight: 1.25rem !default;
+$inputSwitchHandleBorderRadius: 50% !default;
+$inputSwitchSliderPadding: 0.25rem !default;
+$inputSwitchSliderOffBg: $shade400 !default;
+$inputSwitchHandleOffBg: $shade000 !default;
+$inputSwitchSliderOffHoverBg: scale-color($shade400, $lightness: -10%) !default;
+$inputSwitchSliderOnBg: $primaryColor !default;
+$inputSwitchSliderOnHoverBg: $primaryDarkColor !default;
+$inputSwitchHandleOnBg: $shade000 !default;
+
 :root {
   font-family: $fontFamily;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';

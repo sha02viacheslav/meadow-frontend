@@ -1,55 +1,68 @@
-<div [formGroup]="formGroup" class="grid grid-cols-4 gap-x-8 gap-y-10 max-w-[832px]">
-  <span class="custom-form-field p-float-label col-span-2">
-    <input id="firstname" type="text" pInputText formControlName="firstname" (keydown.enter)="submit()" />
-    <label for="firstname">First name</label>
-    <small class="p-error" *ngIf="formGroup.controls['firstname'].errors?.['required']">Required</small>
-  </span>
+<div [formGroup]="formGroup">
+  <div class="grid grid-cols-4 gap-x-8 gap-y-10 max-w-[832px]">
+    <span class="custom-form-field p-float-label col-span-2">
+      <input id="firstname" type="text" pInputText formControlName="firstname" (keydown.enter)="submit()" />
+      <label for="firstname">First name</label>
+      <small class="p-error" *ngIf="formGroup.controls['firstname'].errors?.['required']">Required</small>
+    </span>
 
-  <div class="custom-form-field p-float-label col-span-2">
-    <input type="text" pInputText formControlName="lastname" (keydown.enter)="submit()" />
-    <label for="firstname">Last name</label>
-    <small class="p-error" *ngIf="formGroup.controls['lastname'].errors?.['required']">Required</small>
+    <div class="custom-form-field p-float-label col-span-2">
+      <input type="text" pInputText formControlName="lastname" (keydown.enter)="submit()" />
+      <label for="firstname">Last name</label>
+      <small class="p-error" *ngIf="formGroup.controls['lastname'].errors?.['required']">Required</small>
+    </div>
+
+    <div class="custom-form-field p-float-label col-span-2">
+      <input type="text" pInputText formControlName="email" (keydown.enter)="submit()" />
+      <label for="firstname">Email</label>
+      <small class="p-error" *ngIf="formGroup.controls['email'].errors?.['required']">Required</small>
+    </div>
+
+    <div class="hidden md:block"></div>
+
+    <div class="custom-form-field p-float-label col-span-2">
+      <input type="text" pInputText formControlName="address1" (keydown.enter)="submit()" />
+      <label for="firstname">Address 1</label>
+      <small class="p-error" *ngIf="formGroup.controls['address1'].errors?.['required']">Required</small>
+    </div>
+
+    <div class="custom-form-field p-float-label col-span-2">
+      <input type="text" pInputText formControlName="address2" (keydown.enter)="submit()" />
+      <label for="firstname">Address 2</label>
+      <small class="p-error" *ngIf="formGroup.controls['address2'].errors?.['required']">Required</small>
+    </div>
+
+    <div class="custom-form-field p-float-label col-span-2">
+      <input type="text" pInputText formControlName="city" (keydown.enter)="submit()" />
+      <label for="firstname">City</label>
+      <small class="p-error" *ngIf="formGroup.controls['city'].errors?.['required']">Required</small>
+    </div>
+
+    <div class="custom-form-field p-float-label col-span-1">
+      <input type="text" pInputText formControlName="state" (keydown.enter)="submit()" />
+      <label for="firstname">State</label>
+      <small class="p-error" *ngIf="formGroup.controls['state'].errors?.['required']">Required</small>
+    </div>
+
+    <div class="custom-form-field p-float-label col-span-1">
+      <input type="text" pInputText formControlName="zip" (keydown.enter)="submit()" />
+      <label for="firstname">Zip</label>
+      <small class="p-error" *ngIf="formGroup.controls['zip'].errors?.['required']">Required</small>
+    </div>
   </div>
 
-  <div class="custom-form-field p-float-label col-span-2">
-    <input type="text" pInputText formControlName="email" (keydown.enter)="submit()" />
-    <label for="firstname">Email</label>
-    <small class="p-error" *ngIf="formGroup.controls['email'].errors?.['required']">Required</small>
+  <div class="mt-12">
+    <div class="font-bold text-sm">Email Settings</div>
+
+    <div class="flex gap-20 mt-6">
+      <div class="flex items-center">
+        <p-inputSwitch formControlName="notification" (onChange)="submit()"></p-inputSwitch>
+        <span class="font-medium text-xs ml-3">Notifications</span>
+      </div>
+      <div class="flex items-center">
+        <p-inputSwitch formControlName="news" (onChange)="submit()"></p-inputSwitch>
+        <span class="font-medium text-xs ml-3">Newsletters</span>
+      </div>
+    </div>
   </div>
-
-  <div class="hidden md:block"></div>
-
-  <div class="custom-form-field p-float-label col-span-2">
-    <input type="text" pInputText formControlName="address1" (keydown.enter)="submit()" />
-    <label for="firstname">Address 1</label>
-    <small class="p-error" *ngIf="formGroup.controls['address1'].errors?.['required']">Required</small>
-  </div>
-
-  <div class="custom-form-field p-float-label col-span-2">
-    <input type="text" pInputText formControlName="address2" (keydown.enter)="submit()" />
-    <label for="firstname">Address 2</label>
-    <small class="p-error" *ngIf="formGroup.controls['address2'].errors?.['required']">Required</small>
-  </div>
-
-  <div class="custom-form-field p-float-label col-span-2">
-    <input type="text" pInputText formControlName="city" (keydown.enter)="submit()" />
-    <label for="firstname">City</label>
-    <small class="p-error" *ngIf="formGroup.controls['city'].errors?.['required']">Required</small>
-  </div>
-
-  <div class="custom-form-field p-float-label col-span-1">
-    <input type="text" pInputText formControlName="state" (keydown.enter)="submit()" />
-    <label for="firstname">State</label>
-    <small class="p-error" *ngIf="formGroup.controls['state'].errors?.['required']">Required</small>
-  </div>
-
-  <div class="custom-form-field p-float-label col-span-1">
-    <input type="text" pInputText formControlName="zip" (keydown.enter)="submit()" />
-    <label for="firstname">Zip</label>
-    <small class="p-error" *ngIf="formGroup.controls['zip'].errors?.['required']">Required</small>
-  </div>
-</div>
-
-<div class="mt-12">
-  <div class="font-bold text-sm">Email Settings</div>
 </div>

@@ -22,3 +22,7 @@
 .ng-hidden {
   display: none !important;
 }
+
+.fit-page {
+  min-height: calc(100vh - 7.75rem);
+}

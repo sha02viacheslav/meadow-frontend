@@ -6,11 +6,12 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { UserApiService } from '@services/api/user-api/user-api.service';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '@services/auth/auth.service';
+import { InputSwitchModule } from 'primeng/inputswitch';
 
 @Component({
   selector: 'app-account',
   standalone: true,
-  imports: [NgIf, ReactiveFormsModule, InputTextModule],
+  imports: [NgIf, ReactiveFormsModule, InputTextModule, InputSwitchModule],
   templateUrl: './account.component.html',
   styleUrl: './account.component.scss',
 })
@@ -33,6 +34,8 @@ export class AccountComponent {
       city: ['', [Validators.required]],
       state: ['', [Validators.required]],
       zip: ['', [Validators.required]],
+      notification: [false],
+      news: [false],
     });
 
     const user = this.authService.getUser();
